@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+HEADER.JS :
+              import React from 'react'
+import './Header.css'
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+function Header({cname , Price , ratting, image}
+) {
+    return (
+        <div className="Header">
+            <div className="bannerimage">
+            <img src="manworking.png" alt=""/>
+            </div>
 
-## Available Scripts
+            <div className="bubbles">
+                <img src="bubble.png"  alt=""/>
+                <img src="bubble.png"  alt=""/>
+                <img src="bubble.png"  alt=""/>
+                <img src="bubble.png"  alt=""/>
+                <img src="bubble.png"  alt=""/>
 
-In the project directory, you can run:
+            </div>
+            
+        </div>
+    )
+}
 
-### `npm start`
+export default Header
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Header.css : 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+                  .Header {
+    width: 100%;
+    height: 1000px;
+    background-image:
+    linear-gradient(
+      rgb(240, 236, 236), #06c1f0
+    );
+    justify-content: center;
+    margin-bottom: -600px;
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+.bannerimage > img {
+    position: absolute;
+    margin-top: 200px;
+    right: 100px;
+    opacity: 1;
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.bubbles img{
+  width: 50px;
+  opacity: 0.3;
+  animation: bubble 7s linear infinite;
 
-### `npm run eject`
+}
+.bubbles {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+           For Bubble Animations :
+           
+           
+           
+           @keyframes bubble {
 
-## Learn More
+  0%{
+    transform: translateY(0);
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  70%{
+    opacity:1;
+  }
+  100%{
+    transform: translateY(-80vh);
+    opacity:0;
+  }
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+}
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 4s;
+}.bubbles img:nth-child(3){
+  animation-delay: 2s;
+}.bubbles img:nth-child(4){
+  animation-delay: 6s;
+}.bubbles img:nth-child(5){
+  animation-delay: 2s;
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+                
